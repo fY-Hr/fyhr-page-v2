@@ -8,17 +8,17 @@ interface PopUpMenuProps {
 export function PopUpMenu({className, handleClick}: PopUpMenuProps) {
   return (
     <div className={className}>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col flex-1 gap-2">
         <li>
           <Link
             onClick={handleClick} 
             to="/works"
             className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect duration-400 w-full block" 
             activeProps={{
-              className: "glass-effect border-white/20 ring-white/10",
+              className: "bg-white text-[#155dfc] border-white/20 ring-white/10 shadow-lg",
             }}
           >
-            works
+            :: works
           </Link> 
         </li>
         <li>
@@ -27,10 +27,10 @@ export function PopUpMenu({className, handleClick}: PopUpMenuProps) {
             to="/experiences"
             className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect duration-400 w-full block" 
             activeProps={{
-              className: "glass-effect border-white/20 ring-white/10",
+              className: "bg-white text-[#155dfc] border-white/20 ring-white/10 shadow-lg",
             }}
           >
-            experiences
+            :: experiences
           </Link>
         </li>
         <li>
@@ -39,10 +39,10 @@ export function PopUpMenu({className, handleClick}: PopUpMenuProps) {
             to="/"
             className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect duration-400 w-full block" 
             activeProps={{
-              className: "glass-effect border-white/20 ring-white/10",
+              className: "bg-white text-[#155dfc] border-white/20 ring-white/10",
             }}
           >
-            me
+            :: me
           </Link>
         </li>
       </ul>
