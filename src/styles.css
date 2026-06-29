@@ -23,5 +23,11 @@ body {
 }
 
 @utility glass-effect {
-  @apply border border-white/20 bg-white/10 ring-1 ring-white/10 backdrop-blur-lg shadow-md;
+  @apply border border-white/20 bg-white/10 ring-1 ring-white/10 shadow-md;
+}
+
+.unicode-wave-art {
+  line-height: 1.05;
+  letter-spacing: 2px;
+  font-variant-ligatures: none;
 }

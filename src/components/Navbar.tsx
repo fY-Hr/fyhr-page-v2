@@ -1,7 +1,8 @@
-import { Link, useRouterState } from '@tanstack/react-router'
+import { useRouterState } from '@tanstack/react-router'
 import { Menu } from 'lucide-react'
 import { PopUpMenu } from './ui/PopUpMenu'
 import { useState, useRef, useEffect } from 'react'
+import { NavButton } from './ui/NavButton'
 
 export function Navbar() {
   const [isPopUpOpen, setIsPopUpOpen] = useState(false)
@@ -35,46 +36,27 @@ export function Navbar() {
 
   return (
     <div> 
-      <div className="relative text-md font-bold text-white rounded-xl py-1 px-1 glass-effect flex justify-between items-center">
-        <Link 
-          to="/"
-          className="rounded-lg cursor-pointer hover:bg-transparent hover:text-white duration-400 transition-all font-mono"
-          activeProps={{
-            className: "bg-white text-[#155dfc] border-white/20 ring-white/10",
-          }}
-        >
-          <div className="glass-effect group inline-flex px-2 py-1 rounded-lg justify-center items-center cursor-pointer overflow-hidden transition-all duration-400 ease-out"> 
+      <div className="glass-effect backdrop-blur-md relative text-md font-bold text-white/70 rounded-xl py-1 px-1 flex justify-between items-center">
+        <NavButton to="/">
+          <div className="group inline-flex px-2 py-1 rounded-lg justify-center items-center cursor-pointer overflow-hidden transition-all duration-400 ease-out font-mono"> 
             <span className="shrink-0">fY</span>
             <span className={`
               max-w-13 inline-block overflow-hidden whitespace-nowrap 
-              opacity-100 transition-[max-width,opacity]
-              duration-400 ease-out
-              ${!isIndex ? "group-hover:max-w-13 group-hover:opacity-100 md:max-w-0 md:opacity-0" : ""}`}
+              opacity-100 transition-all duration-400 ease-out
+              ${!isIndex ? "group-hover:max-w-13 group-hover:opacity-100 md:max-w-0 md:opacity-0" : "group:glass-effect"}`}
             >
               -Hr
             </span>
           </div>
-        </Link>
+        </NavButton>
       
         <div className="hidden rounded-lg gap-4 md:flex">
-          <Link 
-            to="/works"
-            className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect hover:text-white duration-400" 
-            activeProps={{
-              className: "bg-white text-[#155dfc] border-white/20 ring-white/10 shadow-lg",
-            }}
-          >
+          <NavButton to="/works" className="py-1 px-2">
             :: works
-          </Link> 
-          <Link 
-            to="/experiences"
-            className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect hover:text-white duration-400" 
-            activeProps={{
-              className: "bg-white text-[#155dfc] border-white/20 ring-white/10 shadow-lg",
-            }}
-          >
+          </NavButton> 
+          <NavButton to="/experiences" className="py-1 px-2">
             :: experiences
-          </Link>
+          </NavButton>
         </div>
         <div className={`relative md:hidden`} ref={popUpRef}>
             <button 

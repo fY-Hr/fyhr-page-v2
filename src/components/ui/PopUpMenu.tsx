@@ -1,49 +1,28 @@
-import { Link } from "@tanstack/react-router"
+import { NavButton } from './NavButton'
 
 interface PopUpMenuProps {
   className: string
   handleClick: () => void
 }
 
-export function PopUpMenu({className, handleClick}: PopUpMenuProps) {
+export function PopUpMenu({ className, handleClick }: PopUpMenuProps) {
   return (
     <div className={className}>
       <ul className="flex flex-col flex-1 gap-2">
         <li>
-          <Link
-            onClick={handleClick} 
-            to="/works"
-            className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect duration-400 w-full block" 
-            activeProps={{
-              className: "bg-white text-[#155dfc] border-white/20 ring-white/10 shadow-lg",
-            }}
-          >
+          <NavButton to="/works" onClick={handleClick} className="block w-full py-1 px-2">
             :: works
-          </Link> 
+          </NavButton>
         </li>
         <li>
-          <Link 
-            onClick={handleClick}
-            to="/experiences"
-            className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect duration-400 w-full block" 
-            activeProps={{
-              className: "bg-white text-[#155dfc] border-white/20 ring-white/10 shadow-lg",
-            }}
-          >
+          <NavButton to="/experiences" onClick={handleClick} className="block w-full py-1 px-2">
             :: experiences
-          </Link>
+          </NavButton>
         </li>
         <li>
-          <Link
-            onClick={handleClick} 
-            to="/"
-            className="py-1 rounded-lg border border-transparent ring-1 ring-transparent px-2 hover:glass-effect duration-400 w-full block" 
-            activeProps={{
-              className: "bg-white text-[#155dfc] border-white/20 ring-white/10",
-            }}
-          >
+          <NavButton to="/" onClick={handleClick} className="block w-full py-1 px-2">
             :: me
-          </Link>
+          </NavButton>
         </li>
       </ul>
     </div>
