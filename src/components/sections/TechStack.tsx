@@ -1,14 +1,16 @@
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 const stacks = [
-  { icon: '/typescript-icon.svg' },
-  { icon: '/react-icon.svg' },
-  { icon: 'tailwindcss-icon.svg' },
-  { icon: '/golang-icon.svg' },
-  { icon: '/nodejs-icon.svg' },
-  { icon: '/laravel-icon.svg' },
-  { icon: '/git-icon.svg' },
-  { icon: '/linux-icon.svg' },
+  { name: 'Typescript', icon: '/typescript-icon.svg' },
+  { name: 'React', icon: '/react-icon.svg' },
+  { name: 'Tanstack', icon: '/tanstack-icon.svg' },
+  { name: 'TailwindCSS', icon: 'tailwindcss-icon.svg' },
+  { name: 'Laravel', icon: '/laravel-icon.svg' },
+  { name: 'Git', icon: '/git-icon.svg' },
+  { name: 'Linux', icon: '/linux-icon.svg' },
+  { name: 'Obsidian', icon: '/obsidian-icon.svg' },
+  { name: 'Neovim', icon: '/neovim-icon.svg' },
+  { name: 'Cursor', icon: '/cursor-icon.svg'},
 ] as const
 
 const gridCols = {
@@ -25,7 +27,8 @@ const colSpan = {
 
 function checkIfFit(cols: number) {
   const remainder = stacks.length % cols
-  return remainder === 0 ? cols : cols - remainder
+  return remainder === 0 ? cols : (cols - remainder == 1 ? cols : cols-remainder)
+
 }
 
 export function TechStack() {
@@ -34,24 +37,25 @@ export function TechStack() {
 
   return (
     <section className="flex flex-col gap-4">
-      <p className="w-fit text-lg font-semibold flex gap-1 cursor-default">
-        Things that i love to use :)
+      <p className="w-fit text-xl font-bold flex gap-1 cursor-default">
+        # Things that i love to use :)
       </p>
 
       <ul className={`grid gap-3 ${gridCols[cols]}`}>
-        {stacks.map(({ icon }) => (
-          <li key={icon}>
+        {stacks.map(({ name, icon }) => (
+          <li key={name}>
             <div className="glass-effect flex flex-col items-center gap-2 rounded-lg p-1 py-2 transition-all duration-400 group">
               <img
                 src={icon}
                 alt=""
+                title={name}
                 className="h-6 w-6 invert opacity-70 transition-all duration-200 group-hover:opacity-100 group-hover:rotate-6"
               />
             </div>
           </li>
         ))}
         <li className={`${colSpan[span]} text-center`}>
-          <div className="glass-effect flex flex-col items-center gap-2 rounded-lg p-1 py-2 transition-all duration-400 group">
+          <div className="bg-[#bac3dd] text-[#012182] font-semibold whitespace-nowrap overflow-hidden flex flex-col items-center gap-2 rounded-lg p-1 py-2 transition-all duration-400 group">
             And learning more...
           </div>
         </li>

@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="flex flex-col w-full gap-7">
       <Hero />
-      <div className="flex flex-col gap-7 px-2">
+      <div className="flex flex-col gap-7">
         <div className="p-1">
           <p className="font-bold text-5xl">Muhammad Fakhry Haidar</p>
           <p className="font-mono">Fullstack Developer {'</>'}</p>
@@ -22,7 +22,7 @@ function Home() {
               I have an interest on low-level stuff, but that's still progressing... ;)
             </p>
           </div>
-         <hr className="my-7 text-white/10" />
+          <hr className="my-7 text-white/10" />
           <TechStack />
         </div>
       </div>
