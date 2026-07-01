@@ -9,7 +9,7 @@ export function Footer() {
         <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src="/react-icon.svg" title="React" className="invert opacity-30 h-4 w-4 hover:opacity-70" />
         </a>
-        <a href="https://tanstack.com" target="_blank" rel="noreferrer">
+        <a href="https://tanstack.com/router/latest" target="_blank" rel="noreferrer">
           <img src="/tanstack-icon.svg" title="Tanstack Router" className="invert opacity-30 h-4 w-4 hover:opacity-70" />
         </a>
       </p>
