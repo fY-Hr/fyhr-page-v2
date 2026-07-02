@@ -22,9 +22,14 @@ body,
   min-height: 100%;
 }
 
+html {
+  background-color: #012182;
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
+  background-color: #012182;
 }
 
 @utility glass-effect {
