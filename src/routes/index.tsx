@@ -2,7 +2,46 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Hero } from '../components/sections/Hero'
 import { SocialLinks } from '../components/SocialLinks'
 import { TechStack } from '../components/sections/TechStack'
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute('/')({
+  component: Home,
+  head: () => ({
+    links: [
+      {
+        rel: 'canonical',
+        href: 'https://fyhr.site/',
+      },
+    ],
+    meta: [
+      {
+        title: 'fY-Hr — Fullstack Developer',
+      },
+      {
+        name: 'description',
+        content: 'Portfolio of Muhammad Fakhry Haidar, a Fullstack Developer from Jakarta, Indonesia.',
+      },
+      {
+        property: 'og:title',
+        content: 'fY-Hr — Fullstack Developer',
+      },
+      {
+        property: 'og:description',
+        content: 'Portfolio of Muhammad Fakhry Haidar, a Fullstack Developer from Jakarta, Indonesia.',
+      },
+      {
+        property: 'og:url',
+        content: 'https://fyhr.site/',
+      },
+      {
+        name: 'twitter:title',
+        content: 'fY-Hr — Fullstack Developer',
+      },
+      {
+        name: 'twitter:description',
+        content: 'Portfolio of Muhammad Fakhry Haidar, a Fullstack Developer from Jakarta, Indonesia.',
+      },
+    ],
+  }),
+})
 
 function Home() {
   return (
@@ -10,7 +49,7 @@ function Home() {
       <Hero />
       <div className="flex flex-col gap-7">
         <div className="p-1">
-          <p className="font-bold text-5xl">Muhammad Fakhry Haidar</p>
+          <h1 className="font-bold text-5xl">Muhammad Fakhry Haidar</h1>
           <p className="font-mono">Fullstack Developer {'</>'}</p>
           <SocialLinks />
         </div>

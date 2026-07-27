@@ -9,7 +9,7 @@ type ExperienceRoleProps = {
 
 export function ExperienceRole({ title, company, children }: ExperienceRoleProps) {
   return (
-    <div>
+    <article>
       <div className="flex items-center bg-white/70 text-[#012182] p-2 rounded-l-lg">
         <div className="h-3 w-2 -mr-1 ml-1 rounded-full bg-[#012182]/50" />
         <p className="border-l border-[#012182]/20 ml-3 px-4 font-bold font-mono">
@@ -22,6 +22,6 @@ export function ExperienceRole({ title, company, children }: ExperienceRoleProps
           <p className="font-mono text-sm text-white/60 italic pl-2 border-l-2 border-white/20">{children}</p>
         </div>
       </div>
-    </div>
+    </article>
   )
 }

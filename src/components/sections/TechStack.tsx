@@ -37,9 +37,9 @@ export function TechStack() {
 
   return (
     <section className="flex flex-col gap-4">
-      <p className="w-fit text-xl font-bold flex gap-1 cursor-default">
+      <h2 className="w-fit text-xl font-bold flex gap-1 cursor-default">
         :: Things that i love to use :)
-      </p>
+      </h2>
 
       <ul className={`grid gap-3 ${gridCols[cols]}`}>
         {stacks.map(({ name, icon }) => (
@@ -47,7 +47,7 @@ export function TechStack() {
             <div className="glass-effect flex flex-col items-center gap-2 rounded-lg p-1 py-2 transition-all duration-400 group">
               <img
                 src={icon}
-                alt=""
+                alt={`${name} icon`}
                 title={name}
                 className="h-6 w-6 invert opacity-70 transition-all duration-200 group-hover:opacity-100 group-hover:rotate-6"
               />

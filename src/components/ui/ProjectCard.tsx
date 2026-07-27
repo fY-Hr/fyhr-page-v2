@@ -10,7 +10,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ year, title, repoUrl, tags, children }: ProjectCardProps) {
   return (
-    <div>
+    <article>
       <div className="glass-effect rounded-t-lg p-2">
         <p className="px-1 font-bold text-white/70 font-mono">{year}</p>
       </div>
@@ -27,7 +27,7 @@ export function ProjectCard({ year, title, repoUrl, tags, children }: ProjectCar
           rel="noreferrer"
           className="flex items-center gap-1.5 px-2 text-sm font-mono hover:underline"
         >
-          <img src="/github-icon.svg" alt="" className="h-4 w-4" />
+          <img src="/github-icon.svg" alt="GitHub icon" className="h-4 w-4" />
           source
         </a>
       </div>
@@ -46,6 +46,6 @@ export function ProjectCard({ year, title, repoUrl, tags, children }: ProjectCar
           ))}
         </div>
       </div>
-    </div>
+    </article>
   )
 }

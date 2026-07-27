@@ -35,7 +35,7 @@ export function Navbar() {
   }, [])
 
   return (
-    <div> 
+    <nav> 
       <div className="glass-effect backdrop-blur-md relative text-md font-bold text-white/70 rounded-xl py-1 px-1 flex justify-between items-center">
         <NavButton to="/">
           <div className="group inline-flex px-2 py-1 rounded-lg justify-center items-center cursor-pointer overflow-hidden transition-all duration-400 ease-out font-mono"> 
@@ -83,6 +83,6 @@ export function Navbar() {
             : 'pointer-events-none translate-x-2 opacity-0'}
         `}
       />
-    </div>
+    </nav>
   )
 }

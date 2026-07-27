@@ -4,13 +4,50 @@ import { ProjectCard } from '../components/ui/ProjectCard'
 
 export const Route = createFileRoute('/works')({
   component: WorksPage,
+  head: () => ({
+    links: [
+      {
+        rel: 'canonical',
+        href: 'https://fyhr.site/works',
+      },
+    ],
+    meta: [
+      {
+        title: 'Works | fY-Hr',
+      },
+      {
+        name: 'description',
+        content: "A showcase of projects and experiments built by Muhammad Fakhry Haidar.",
+      },
+      {
+        property: 'og:title',
+        content: 'Works | fY-Hr',
+      },
+      {
+        property: 'og:description',
+        content: 'A showcase of projects and experiments built by Muhammad Fakhry Haidar.',
+      },
+      {
+        property: 'og:url',
+        content: 'https://fyhr.site/works',
+      },
+      {
+        name: 'twitter:title',
+        content: 'Works | fY-Hr',
+      },
+      {
+        name: 'twitter:description',
+        content: 'A showcase of projects and experiments built by Muhammad Fakhry Haidar.',
+      },
+    ],
+  }),
 })
 
 function WorksPage() {
   return (
     <div className="flex w-full flex-col gap-7">
       <div className="p-1">
-        <p className="text-5xl font-bold">Works</p>
+        <h1 className="text-5xl font-bold">Works</h1>
         <blockquote className="mt-2 max-w-prose border-l-2 border-white/20 pl-4 font-mono text-sm italic text-white/60">
           Things I've built and experimented with —{' '}
           <FolderGit2 className="inline-block h-4 w-4 shrink-0 not-italic" />
