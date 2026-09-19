@@ -55,7 +55,7 @@ function Home() {
         </div>
         <div className="p-1">
           <div className="glass-effect w-full rounded-lg p-4">
-            <p className="font-bold pb-2">I'm a <span className="font-semibold underline">developer</span> from Jakarta, Indonesia.</p>
+            <p className="font-bold pb-2">I'm a <span className="font-semibold underline">developer</span> <span className="font-light">and a college student</span> from Jakarta, Indonesia.</p>
             <p className="pl-4 border-l">
               I have almost <span className="font-semibold">2 YoE</span> as a <span className="font-semibold">developer</span>. Most of my work is <span className="font-semibold">web-based</span> app. I enjoy making stuff, experimenting, especially a project with friends.
               I have an interest on low-level stuff, but that's still progressing... ;)
