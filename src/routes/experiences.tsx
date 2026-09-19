@@ -55,29 +55,50 @@ function ExperiencesPage() {
         </blockquote>
       </div>
 
-      <ExperiencePeriod period="PRESENT">
+      <ExperiencePeriod period="2025-2026">
         <ExperienceRole title="Junior Programmer" company="PT. Biggy Cemerlang">
-          Developing custom applications for the company on top of{' '}
-          <a
-            href="https://joget.com/platform/platform/joget-dx/"
-            target="_blank"
-            className="hover:underline font-semibold underline sm:no-underline"
-          >
-            Joget DX
-          </a>
+          <ul className="list-disc pl-[0.5px]">
+            <li>
+              Developed enterprise applications on Joget DX using Java, JavaScript (jQuery), and platform extensions.</li>
+            <li>
+              Built a QR-based system for end-to-end production, warehouse, and delivery tracking.
+            </li>
+            <li>
+              Developed a farm management platform for production, inventory, and operational reporting.
+            </li>
+            <li>
+              Built a real-time Joget DX plugin using Java Beanshell.
+            </li>
+            <li>
+              Collaborated with cross-functional stakeholders to analyze processes and deliver operational solutions.
+            </li>
+          </ul>
         </ExperienceRole>
       </ExperiencePeriod>
       <ExperiencePeriod period="2025">
         <ExperienceRole title="IT Intern" company="SMK Pangeran Wijaya Kusuma">
-          Developed an application for the SPMB admission event. This app significantly reduced service 
-          time by improving information flow and accelerating order processing between departments while 
-          the event was underway.
+        <ul className="list-disc pl-[0.5px]">
+          <li>
+            Developed an application for the SPMB admission event. 
+          </li>
+          <li>
+            This app significantly reduced service 
+            time by improving information flow and accelerating order processing between departments while 
+            the event was underway.
+          </li>
+        </ul>
         </ExperienceRole>
       </ExperiencePeriod>
       <ExperiencePeriod period="2024">
         <ExperienceRole title="Junior Assistant Programmer" company="PT. Biggy Cemerlang">
-          Successfully transformed a previously manual psychological testing process into an app.
-          Improving assessment efficiency, data management, and result processing while reducing manual administrative work.
+        <ul className="list-disc pl-[0.5px]">
+          <li>
+            Successfully transformed a previously manual psychological testing process into an app.
+          </li>
+          <li>
+            Improving assessment efficiency, data management, and result processing while reducing manual administrative work.
+          </li>
+        </ul>
         </ExperienceRole>
       </ExperiencePeriod>
     </div>
