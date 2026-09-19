@@ -7,7 +7,7 @@ export function AppLayout({ children } : { children: ReactNode }) {
 
 
   const pathname = useRouterState({
-    select: (state) => state.location.pathname
+    select: (state) => state.reservedLocation?.pathname ?? state.location.pathname,
   })
 
   return (
@@ -16,7 +16,7 @@ export function AppLayout({ children } : { children: ReactNode }) {
         <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full sm:w-full md:w-3/4 lg:w-1/2 px-4">
           <Navbar />
         </header>
-        <main className="w-full flex flex-col overflow-x-hidden pt-24 px-8 ">
+        <main className="w-full flex flex-col overflow-x-hidden pt-24 px-8 min-h-[60vh]">
           <div key={pathname} className="w-full animate-fade-in">
             {children}
           </div>
