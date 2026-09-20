@@ -57,7 +57,7 @@ function ExperiencesPage() {
 
       <ExperiencePeriod period="2025-2026">
         <ExperienceRole title="Junior Programmer" company="PT. Biggy Cemerlang">
-          <ul className="list-disc pl-[0.5px]">
+          <ul className="list-disc pl-3">
             <li>
               Developed enterprise applications on Joget DX using Java, JavaScript (jQuery), and platform extensions.</li>
             <li>
@@ -77,7 +77,7 @@ function ExperiencesPage() {
       </ExperiencePeriod>
       <ExperiencePeriod period="2025">
         <ExperienceRole title="IT Intern" company="SMK Pangeran Wijaya Kusuma">
-        <ul className="list-disc pl-[0.5px]">
+        <ul className="list-disc pl-3">
           <li>
             Developed an application for the SPMB admission event. 
           </li>
@@ -91,7 +91,7 @@ function ExperiencesPage() {
       </ExperiencePeriod>
       <ExperiencePeriod period="2024">
         <ExperienceRole title="Junior Assistant Programmer" company="PT. Biggy Cemerlang">
-        <ul className="list-disc pl-[0.5px]">
+        <ul className="list-disc pl-3">
           <li>
             Successfully transformed a previously manual psychological testing process into an app.
           </li>
