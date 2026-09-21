@@ -7,7 +7,7 @@ export function AppLayout({ children } : { children: ReactNode }) {
 
 
   const pathname = useRouterState({
-    select: (state) => state.reservedLocation?.pathname ?? state.location.pathname,
+    select: (state) => state.resolvedLocation?.pathname ?? state.location.pathname,
   })
 
   return (
