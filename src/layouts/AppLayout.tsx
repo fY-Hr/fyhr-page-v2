@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/sections/Footer'
-import { useLocation } from '@tanstack/react-router'
+import { useMatches } from '@tanstack/react-router'
 
-export function AppLayout({ children } : { children: ReactNode }) {
-
-  const { pathname } = useLocation();
+export function AppLayout({ children }: { children: ReactNode }) {
+  const matches = useMatches()
+  const currentMatchId = matches[matches.length - 1]?.id
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden text-[#bac3dd] bg-[#012182]">
@@ -14,7 +14,7 @@ export function AppLayout({ children } : { children: ReactNode }) {
           <Navbar />
         </header>
         <main className="w-full flex flex-col overflow-x-hidden pt-24 px-8 min-h-[60vh]">
-          <div key={pathname} className="w-full animate-fade-in">
+          <div key={currentMatchId} className="w-full animate-fade-in">
             {children}
           </div>
         </main>
@@ -24,5 +24,5 @@ export function AppLayout({ children } : { children: ReactNode }) {
         </footer>
       </div>
     </div>
-)
+  )
 }
