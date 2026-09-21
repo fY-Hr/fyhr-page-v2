@@ -1,14 +1,11 @@
 import type { ReactNode } from 'react'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/sections/Footer'
-import { useRouterState } from '@tanstack/react-router'
+import { useLocation } from '@tanstack/react-router'
 
 export function AppLayout({ children } : { children: ReactNode }) {
 
-
-  const pathname = useRouterState({
-    select: (state) => state.resolvedLocation?.pathname ?? state.location.pathname,
-  })
+  const { pathname } = useLocation();
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden text-[#bac3dd] bg-[#012182]">
