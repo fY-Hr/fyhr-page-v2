@@ -9,8 +9,8 @@ export function AppLayout({ children } : { children: ReactNode }) {
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden text-[#bac3dd] bg-[#012182]">
-      <div className="sm:w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
-        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full sm:w-full md:w-3/4 lg:w-1/2 px-4">
+      <div className="sm:w-11/12 md:w-3/4 lg:w-2xl mx-auto">
+        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full sm:w-full md:w-3/4 lg:w-2xl px-4">
           <Navbar />
         </header>
         <main className="w-full flex flex-col overflow-x-hidden pt-24 px-8 min-h-[60vh]">
