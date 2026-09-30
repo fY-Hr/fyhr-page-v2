@@ -1,9 +1,12 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
+import { lazy, Suspense } from 'react'
 import { AppLayout } from '../layouts/AppLayout'
 
 import '../styles.css'
+
+const DevTools = import.meta.env.DEV
+  ? lazy(() => import('../components/DevTools'))
+  : () => null
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -29,17 +32,9 @@ function RootComponent() {
       <AppLayout>
         <Outlet />
       </AppLayout>
-      <TanStackDevtools
-        config={{
-          position: 'bottom-right',
-        }}
-        plugins={[
-          {
-            name: 'TanStack Router',
-            render: <TanStackRouterDevtoolsPanel />,
-          },
-        ]}
-      />
+      <Suspense>
+        <DevTools />
+      </Suspense>
     </>
   )
 }
