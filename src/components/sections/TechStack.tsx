@@ -10,7 +10,7 @@ const stacks = [
   { name: 'Linux', icon: '/linux-icon.svg' },
   { name: 'Obsidian', icon: '/obsidian-icon.svg' },
   { name: 'Neovim', icon: '/neovim-icon.svg' },
-  { name: 'Cursor', icon: '/cursor-icon.svg'},
+  { name: 'Zed', icon: '/zed-icon.svg'},
 ] as const
 
 const gridCols = {
@@ -55,7 +55,7 @@ export function TechStack() {
           </li>
         ))}
         <li className={`${colSpan[span]} text-center`}>
-          <div className="h-full w-full bg-[#bac3dd] text-[#012182] text-sm font-semibold whitespace-nowrap overflow-hidden flex flex-col items-center justify-center gap-2 rounded-lg p-1 py-2 transition-all duration-400 group">
+          <div className="h-full w-full bg-[#bac3dd] text-[#2F488E] text-sm font-semibold whitespace-nowrap overflow-hidden flex flex-col items-center justify-center gap-2 rounded-lg p-1 py-2 transition-all duration-400 group">
             Learning more...
           </div>
         </li>

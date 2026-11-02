@@ -9,12 +9,12 @@ interface NavButtonProps {
 
 export function NavButton({ children, to, className = '', onClick }: NavButtonProps) {
   return (
-    <Link 
+    <Link
       to={to}
       onClick={onClick}
       className={`rounded-lg cursor-pointer border border-transparent ring-1 ring-transparent duration-400 transition-all hover:glass-effect ${className}`}
       activeProps={{
-        className: "bg-white/70 text-[#012182] border-white/20 ring-white/10 hover:text-white",
+        className: "bg-white/70 text-[#2F488E] border-white/20 ring-white/10 hover:text-white",
       }}
     >
       {children}

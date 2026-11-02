@@ -14,7 +14,7 @@ export function ProjectCard({ year, title, repoUrl, tags, children }: ProjectCar
       <div className="glass-effect rounded-t-lg p-2">
         <p className="px-1 font-bold text-white/70 font-mono">{year}</p>
       </div>
-      <div className="flex items-center justify-between bg-white/70 text-[#012182] p-2">
+      <div className="flex items-center justify-between bg-white/70 text-[#2F488E] p-2">
         <div className="flex items-center">
           <div className="h-2 w-3 rounded-full bg-[#012182]/50" />
           <p className="border-l border-[#012182]/20 ml-2 px-4 font-bold font-mono">
